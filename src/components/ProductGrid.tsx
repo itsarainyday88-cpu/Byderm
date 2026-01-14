@@ -1,40 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-
-const products = [
-    {
-        category: "Intensive Care",
-        name: "Intensive Cream",
-        desc: "Biotechnology to Protect the Skin Barrier",
-        detail: "A cream to protect and hydrate dry or sensitive skin with a weakened skin barrier.",
-        image: "/images/intensive-cream-v3.png",
-        color: "bg-blue-100 text-blue-800"
-    },
-    {
-        category: "Soothing Care",
-        name: "Centella Cica Plus Mask",
-        desc: "Cream-essence formula containing centella cica-complex",
-        detail: "Provides soothing and moisturizing care to sensitive skin with a centella cica-complex.",
-        image: "/images/cica-mask-v3.png",
-        color: "bg-green-100 text-green-800"
-    },
-    {
-        category: "Sun Care",
-        name: "Hyalu Moisture Suncream",
-        desc: "SPF50+ PA++++ Daily Sun Care",
-        detail: "A lightweight, moisturizing sun cream that protects against UV rays without white cast.",
-        image: "/images/suncream-studio.png",
-        color: "bg-orange-100 text-orange-800"
-    },
-    {
-        category: "Special Care",
-        name: "Hyaluronic Acid Mask",
-        desc: "Intensive Hydration Treatment",
-        detail: "Deeply hydrates and plumps the skin with multi-molecular hyaluronic acid.",
-        image: "/images/ha-mask-studio.png",
-        color: "bg-blue-50 text-blue-600"
-    }
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 interface ProductGridProps {
     variant?: 'compact' | 'full';
@@ -42,14 +10,46 @@ interface ProductGridProps {
 
 export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
     const isFull = variant === 'full';
+    const { t } = useLanguage();
+
+    const products = [
+        {
+            category: t.products.categories.intensive,
+            name: t.products.items.intensive_cream.name,
+            desc: t.products.items.intensive_cream.desc,
+            detail: t.products.items.intensive_cream.detail,
+            image: "/images/intensive-cream-v3.png",
+        },
+        {
+            category: t.products.categories.soothing,
+            name: t.products.items.cica_mask.name,
+            desc: t.products.items.cica_mask.desc,
+            detail: t.products.items.cica_mask.detail,
+            image: "/images/cica-mask-v3.png",
+        },
+        {
+            category: t.products.categories.sun,
+            name: t.products.items.suncream.name,
+            desc: t.products.items.suncream.desc,
+            detail: t.products.items.suncream.detail,
+            image: "/images/suncream-studio.png",
+        },
+        {
+            category: t.products.categories.special,
+            name: t.products.items.ha_mask.name,
+            desc: t.products.items.ha_mask.desc,
+            detail: t.products.items.ha_mask.detail,
+            image: "/images/ha-mask-studio.png",
+        }
+    ];
 
     return (
         <section className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Product Lineup</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.products.title}</h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">
-                        Scientifically formulated solutions for every step of professional skin care.
+                        {t.products.subtitle}
                     </p>
                 </div>
 
@@ -79,7 +79,7 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
                                 </p>
                                 {isFull && (
                                     <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform cursor-pointer">
-                                        View Details <ArrowRight className="ml-2 w-4 h-4" />
+                                        {t.products.view_details} <ArrowRight className="ml-2 w-4 h-4" />
                                     </div>
                                 )}
                             </div>

@@ -3,15 +3,18 @@
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-
-const navigation = [
-    { name: 'Products', href: '/products' },
-    { name: 'Technology', href: '/technology' },
-    { name: 'Contact', href: 'https://wakemedi.com/en/sub/contact.html' },
-];
+import { useLanguage } from '@/context/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const { t } = useLanguage();
+
+    const navigation = [
+        { name: t.nav.products, href: '/products' },
+        { name: t.nav.technology, href: '/technology' },
+        { name: t.nav.contact, href: 'https://wakemedi.com/en/sub/contact.html' },
+    ];
 
     return (
         <header className="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
@@ -22,7 +25,8 @@ export default function Header() {
                         <span className="text-2xl font-bold text-primary tracking-tight">By.derm</span>
                     </Link>
                 </div>
-                <div className="flex lg:hidden">
+                <div className="flex lg:hidden items-center gap-4">
+                    <LanguageSwitcher />
                     <button
                         type="button"
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -36,15 +40,18 @@ export default function Header() {
                         )}
                     </button>
                 </div>
-                <div className="hidden lg:flex lg:gap-x-12">
+                <div className="hidden lg:flex lg:gap-x-12 items-center">
                     {navigation.map((item) => (
                         <Link key={item.name} href={item.href} className="text-lg font-semibold leading-6 text-gray-900 data-[active=true]:text-primary hover:text-primary transition-colors">
                             {item.name}
                         </Link>
                     ))}
+                    <div className="border-l border-gray-200 pl-6 ml-6">
+                        <LanguageSwitcher />
+                    </div>
                 </div>
             </nav>
-            {/* Mobile menu - simplified for brevity, assume similar structure but using new navigation */}
+            {/* Mobile menu */}
             {mobileMenuOpen && (
                 <div className="lg:hidden" role="dialog" aria-modal="true">
                     <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />

@@ -1,17 +1,22 @@
+'use client';
+
 import Philosophy from '@/components/Philosophy';
 import { Microscope, Dna, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function TechnologyPage() {
+    const { t } = useLanguage();
+
     return (
         <main className="min-h-screen pt-20">
             <div className="bg-primary py-24 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('/images/hero-brand.jpg')] bg-cover bg-center" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Technology</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{t.technology.title}</h1>
                     <p className="text-xl text-blue-100 max-w-3xl mx-auto font-light">
-                        Bridging the gap between medical science and daily skincare.<br />
-                        We solve skin concerns with pharmaceutical-grade precision.
+                        {t.technology.subtitle_line1}<br />
+                        {t.technology.subtitle_line2}
                     </p>
                 </div>
             </div>
@@ -21,8 +26,8 @@ export default function TechnologyPage() {
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Core Innovation</h2>
-                        <p className="text-gray-500">The three pillars of By.derm's efficacy.</p>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{t.technology.core_innovation}</h2>
+                        <p className="text-gray-500">{t.technology.core_desc}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -31,7 +36,7 @@ export default function TechnologyPage() {
                             <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src="/images/innovation-biomimetic.png"
-                                    alt="Biomimetic Formulation"
+                                    alt={t.technology.innovations.biomimetic.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                                 />
@@ -44,9 +49,9 @@ export default function TechnologyPage() {
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-xl font-bold mb-3 text-gray-900">Biomimetic Formulation</h3>
+                                <h3 className="text-xl font-bold mb-3 text-gray-900">{t.technology.innovations.biomimetic.title}</h3>
                                 <p className="text-gray-600 leading-relaxed text-sm">
-                                    We mimic naturally occurring skin components to ensure maximum absorption and minimal irritation, restoring the skin's original strength.
+                                    {t.technology.innovations.biomimetic.desc}
                                 </p>
                             </div>
                         </div>
@@ -56,7 +61,7 @@ export default function TechnologyPage() {
                             <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src="/images/innovation-filler.png"
-                                    alt="Filler Technology"
+                                    alt={t.technology.innovations.filler.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                                 />
@@ -69,9 +74,9 @@ export default function TechnologyPage() {
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-xl font-bold mb-3 text-gray-900">Filler Technology</h3>
+                                <h3 className="text-xl font-bold mb-3 text-gray-900">{t.technology.innovations.filler.title}</h3>
                                 <p className="text-gray-600 leading-relaxed text-sm">
-                                    Applying the cross-linking technology used in dermal fillers to creating high-density moisture barriers that last longer.
+                                    {t.technology.innovations.filler.desc}
                                 </p>
                             </div>
                         </div>
@@ -81,7 +86,7 @@ export default function TechnologyPage() {
                             <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src="/images/innovation-barrier.png"
-                                    alt="Barrier Reconstruction"
+                                    alt={t.technology.innovations.barrier.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                                 />
@@ -94,9 +99,9 @@ export default function TechnologyPage() {
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-xl font-bold mb-3 text-gray-900">Barrier Reconstruction</h3>
+                                <h3 className="text-xl font-bold mb-3 text-gray-900">{t.technology.innovations.barrier.title}</h3>
                                 <p className="text-gray-600 leading-relaxed text-sm">
-                                    Our formulas don't just coat the skin. They actively repair the lipid barrier, protecting against environmental aggressors.
+                                    {t.technology.innovations.barrier.desc}
                                 </p>
                             </div>
                         </div>

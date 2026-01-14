@@ -1,6 +1,11 @@
+'use client';
+
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Hero() {
+    const { t } = useLanguage();
+
     return (
         <section className="relative h-[90vh] flex items-center overflow-hidden">
             {/* Background Image */}
@@ -18,15 +23,15 @@ export default function Hero() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="max-w-3xl">
                     <h2 className="text-blue-200 font-medium tracking-wide mb-4 animate-fade-in-up">
-                        e.p.t.q. By.derm
+                        {t.hero.brand}
                     </h2>
                     <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up delay-100">
-                        Bye dryness,<br />
-                        Hi derm glow!
+                        {t.hero.title_line1}<br />
+                        {t.hero.title_line2}
                     </h1>
                     <p className="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
-                        Enhanced By Biotechnology.<br />
-                        A dramatic solution for extreme sensitivity and dryness.
+                        {t.hero.subtitle_line1}<br />
+                        {t.hero.subtitle_line2}
                     </p>
 
                 </div>
