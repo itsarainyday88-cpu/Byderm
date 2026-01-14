@@ -28,11 +28,7 @@ export default function Hero() {
                         Enhanced By Biotechnology.<br />
                         A dramatic solution for extreme sensitivity and dryness.
                     </p>
-                    <div className="flex space-x-4 animate-fade-in-up delay-300">
-                        <button className="px-8 py-3 bg-white text-primary font-semibold rounded-full hover:bg-blue-50 transition-colors shadow-lg">
-                            Discover More
-                        </button>
-                    </div>
+
                 </div>
             </div>
 

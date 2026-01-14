@@ -53,7 +53,7 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
                     </p>
                 </div>
 
-                <div className={`grid grid-cols-1 sm:grid-cols-2 ${isFull ? 'lg:grid-cols-2' : 'lg:grid-cols-4'} gap-${isFull ? '8' : '6'}`}>
+                <div className={`grid grid-cols-1 sm:grid-cols-2 ${isFull ? 'lg:grid-cols-2' : 'lg:grid-cols-4'} gap-8`}>
                     {products.map((product, idx) => (
                         <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 flex flex-col">
                             <div className={`relative ${isFull ? 'h-64' : 'h-48'} w-full bg-white overflow-hidden p-6`}>
