@@ -19,6 +19,7 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
             desc: t.products.items.intensive_cream.desc,
             detail: t.products.items.intensive_cream.detail,
             image: "/images/intensive-cream-v3.png",
+            slug: 'intensive-cream'
         },
         {
             category: t.products.categories.soothing,
@@ -26,6 +27,7 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
             desc: t.products.items.cica_mask.desc,
             detail: t.products.items.cica_mask.detail,
             image: "/images/cica-mask-v3.png",
+            slug: 'cica-mask'
         },
         {
             category: t.products.categories.sun,
@@ -33,6 +35,7 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
             desc: t.products.items.suncream.desc,
             detail: t.products.items.suncream.detail,
             image: "/images/suncream-studio.png",
+            slug: undefined // No detail image
         },
         {
             category: t.products.categories.special,
@@ -40,6 +43,7 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
             desc: t.products.items.ha_mask.desc,
             detail: t.products.items.ha_mask.detail,
             image: "/images/ha-mask-studio.png",
+            slug: 'ha-mask'
         }
     ];
 
@@ -77,10 +81,10 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
                                 <p className={`text-gray-500 leading-relaxed ${isFull ? 'text-sm mb-6' : 'text-xs'} flex-1`}>
                                     {product.detail}
                                 </p>
-                                {isFull && (
-                                    <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform cursor-pointer">
+                                {isFull && product.slug && (
+                                    <a href={`/products/${product.slug}`} className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform cursor-pointer">
                                         {t.products.view_details} <ArrowRight className="ml-2 w-4 h-4" />
-                                    </div>
+                                    </a>
                                 )}
                             </div>
                         </div>
