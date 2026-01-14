@@ -4,6 +4,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import ProductDetail from '@/components/ProductDetail';
 
 // Map slugs to image files
 const productImages: Record<string, string> = {
@@ -19,9 +20,14 @@ export default function ProductDetailPage() {
 
     // params.slug defaults to string | string[], normalize it
     const slug = typeof params?.slug === 'string' ? params.slug : '';
-    const imagePath = productImages[slug];
 
-    if (!slug || !imagePath) {
+    // Fallback image if specific product image is missing (using grid image for now)
+    const imagePath = productImages[slug] || '/images/intensive-cream-v3.png';
+
+    // Check if we have data for this slug
+    const productDataExists = (t as any).product_details_content?.[slug];
+
+    if (!slug || !productDataExists) {
         return (
             <div className="min-h-screen pt-32 flex flex-col items-center justify-center">
                 <h1 className="text-2xl font-bold text-gray-900 mb-4">{t.product_detail.not_found}</h1>
@@ -36,33 +42,19 @@ export default function ProductDetailPage() {
     }
 
     return (
-        <main className="min-h-screen pt-20 bg-white">
+        <main className="min-h-screen pt-20 bg-gray-50">
             {/* Nav Back */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <button
                     onClick={() => router.push('/products')}
-                    className="text-gray-600 hover:text-primary transition-colors flex items-center mb-8 group"
+                    className="text-gray-500 hover:text-primary transition-colors flex items-center group font-medium"
                 >
-                    <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+                    <ArrowLeft className="w-5 h-5 mr-1 group-hover:-translate-x-1 transition-transform" />
                     {t.product_detail.back_to_products}
                 </button>
             </div>
 
-            {/* Detail Image */}
-            <div className="w-full max-w-5xl mx-auto bg-white shadow-sm mb-24">
-                <div className="relative w-full">
-                    {/* Using unoptimized for long detail images to ensure full quality and scrolling */}
-                    <Image
-                        src={imagePath}
-                        alt={slug}
-                        width={1200}
-                        height={3000} // Approximate height, w-auto h-auto css will handle aspect
-                        className="w-full h-auto"
-                        priority
-                        unoptimized
-                    />
-                </div>
-            </div>
+            <ProductDetail slug={slug} imagePath={imagePath} />
         </main>
     );
 }

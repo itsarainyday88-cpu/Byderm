@@ -89,6 +89,28 @@ export const translations = {
             back_to_products: "Back to Products",
             not_found: "Product Not Found",
         },
+        product_details_content: {
+            "intensive-cream": {
+                title: "Intensive Cream",
+                subtitle: "The Power to Protect Your Skin Barrier",
+                description: "A high-density barrier cream designed for extremely dry and sensitive skin. Enriched with Evening Primrose Oil, Centella Asiatica, and Shea Butter, it provides deep hydration and restoration.",
+                benefits: [
+                    "Restores damaged skin barriers",
+                    "Deep hydration for 24+ hours",
+                    "Sooths redness and irritation",
+                    "Hypoallergenic formula"
+                ],
+                ingredients: {
+                    highlight: "Evening Primrose Oil, Centella Asiatica, Shea Butter",
+                    list: "Water, Glycerin, Caprylic/Capric Triglyceride, Butyrospermum Parkii (Shea) Butter, Oenothera Biennis (Evening Primrose) Oil, Centella Asiatica Extract..."
+                },
+                usage: "Apply a moderate amount to the face and neck. Gently massage until fully absorbed. Use morning and night.",
+                specs: {
+                    volume: "100ml",
+                    skin_type: "Dry, Sensitive, All Skin Types"
+                }
+            }
+        },
     },
     th: {
         nav: {
@@ -180,6 +202,28 @@ export const translations = {
             back_to_products: "กลับไปยังสินค้า",
             not_found: "ไม่พบสินค้า",
         },
+        product_details_content: {
+            "intensive-cream": {
+                title: "Intensive Cream",
+                subtitle: "พลังแห่งการปกป้องเกราะป้องกันผิวของคุณ",
+                description: "ครีมบำรุงเข้มข้นที่ออกแบบมาเพื่อผิวแห้งและแพ้ง่ายโดยเฉพาะ อุดมด้วยน้ำมันอีฟนิ่งพริมโรส สารสกัดจากใบบัวบก และเชียบัตเตอร์ มอบความชุ่มชื้นล้ำลึกและการฟื้นฟู",
+                benefits: [
+                    "ฟื้นฟูเกราะป้องกันผิวที่ถูกทำลาย",
+                    "ให้ความชุ่มชื้นยาวนานกว่า 24 ชั่วโมง",
+                    "ปลอบประโลมรอยแดงและการระคายเคือง",
+                    "สูตรไฮโปอัลเลอร์เจนิก (ไม่ก่อให้เกิดการแพ้)"
+                ],
+                ingredients: {
+                    highlight: "น้ำมันอีฟนิ่งพริมโรส, สารสกัดจากใบบัวบก, เชียบัตเตอร์",
+                    list: "Water, Glycerin, Caprylic/Capric Triglyceride, Butyrospermum Parkii (Shea) Butter, Oenothera Biennis (Evening Primrose) Oil, Centella Asiatica Extract..."
+                },
+                usage: "ทาปริมาณพอเหมาะลงบนใบหน้าและลำคอ นวดเบาๆ จนซึมซาบเข้าสู่ผิว ใช้เป็นประจำเช้า-เย็น",
+                specs: {
+                    volume: "100ml",
+                    skin_type: "ผิวแห้ง, ผิวแพ้ง่าย, ทุกสภาพผิว"
+                }
+            }
+        },
     },
     vi: {
         nav: {
@@ -270,6 +314,28 @@ export const translations = {
         product_detail: {
             back_to_products: "Quay lại sản phẩm",
             not_found: "Không tìm thấy sản phẩm",
+        },
+        product_details_content: {
+            "intensive-cream": {
+                title: "Intensive Cream",
+                subtitle: "Sức mạnh bảo vệ hàng rào da của bạn",
+                description: "Kem dưỡng hàng rào mật độ cao được thiết kế cho da cực khô và nhạy cảm. Giàu tinh dầu hoa anh thảo, chiết xuất rau má và bơ hạt mỡ, mang lại khả năng cấp ẩm sâu và phục hồi.",
+                benefits: [
+                    "Phục hồi hàng rào bảo vệ da bị tổn thương",
+                    "Cấp ẩm sâu trong hơn 24 giờ",
+                    "Làm dịu vết đỏ và kích ứng",
+                    "Công thức không gây dị ứng"
+                ],
+                ingredients: {
+                    highlight: "Dầu hoa anh thảo, Chiết xuất rau má, Bơ hạt mỡ",
+                    list: "Water, Glycerin, Caprylic/Capric Triglyceride, Butyrospermum Parkii (Shea) Butter, Oenothera Biennis (Evening Primrose) Oil, Centella Asiatica Extract..."
+                },
+                usage: "Lấy một lượng vừa đủ thoa lên mặt và cổ. Nhẹ nhàng massage cho đến khi thẩm thấu hoàn toàn. Sử dụng sáng và tối.",
+                specs: {
+                    volume: "100ml",
+                    skin_type: "Da khô, Da nhạy cảm, Mọi loại da"
+                }
+            }
         },
     },
 };
