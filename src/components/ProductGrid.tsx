@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -58,37 +59,56 @@ export default function ProductGrid({ variant = 'compact' }: ProductGridProps) {
                 </div>
 
                 <div className={`grid grid-cols-1 sm:grid-cols-2 ${isFull ? 'lg:grid-cols-2' : 'lg:grid-cols-4'} gap-8`}>
-                    {products.map((product, idx) => (
-                        <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 flex flex-col">
-                            <div className={`relative ${isFull ? 'h-64' : 'h-48'} w-full bg-white overflow-hidden p-6`}>
-                                <Image
-                                    src={product.image}
-                                    alt={product.name}
-                                    fill
-                                    className="object-contain group-hover:scale-105 transition-transform duration-500"
-                                />
+                    {products.map((product, idx) => {
+                        const CardContent = (
+                            <>
+                                <div className={`relative ${isFull ? 'h-64' : 'h-48'} w-full bg-white overflow-hidden p-6`}>
+                                    <Image
+                                        src={product.image}
+                                        alt={product.name}
+                                        fill
+                                        className="object-contain group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className={`${isFull ? 'p-8' : 'p-6'} flex-1 flex flex-col`}>
+                                    <span className={`${isFull ? 'text-sm' : 'text-xs'} font-semibold uppercase tracking-wider text-primary mb-2 block`}>
+                                        {product.category}
+                                    </span>
+                                    <h3 className={`${isFull ? 'text-2xl' : 'text-lg'} font-bold text-gray-900 mb-${isFull ? '3' : '2'} group-hover:text-primary transition-colors`}>
+                                        {product.name}
+                                    </h3>
+                                    <p className={`text-gray-700 font-medium ${isFull ? 'text-base mb-4' : 'text-sm mb-3'}`}>
+                                        {product.desc}
+                                    </p>
+                                    <p className={`text-gray-500 leading-relaxed ${isFull ? 'text-sm mb-6' : 'text-xs'} flex-1`}>
+                                        {product.detail}
+                                    </p>
+                                    {isFull && product.slug && (
+                                        <span className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform mt-auto">
+                                            {t.products.view_details} <ArrowRight className="ml-2 w-4 h-4" />
+                                        </span>
+                                    )}
+                                </div>
+                            </>
+                        );
+
+                        return product.slug ? (
+                            <Link
+                                key={idx}
+                                href={`/products/${product.slug}`}
+                                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 flex flex-col"
+                            >
+                                {CardContent}
+                            </Link>
+                        ) : (
+                            <div
+                                key={idx}
+                                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 flex flex-col cursor-default"
+                            >
+                                {CardContent}
                             </div>
-                            <div className={`${isFull ? 'p-8' : 'p-6'} flex-1 flex flex-col`}>
-                                <span className={`${isFull ? 'text-sm' : 'text-xs'} font-semibold uppercase tracking-wider text-primary mb-2 block`}>
-                                    {product.category}
-                                </span>
-                                <h3 className={`${isFull ? 'text-2xl' : 'text-lg'} font-bold text-gray-900 mb-${isFull ? '3' : '2'} group-hover:text-primary transition-colors`}>
-                                    {product.name}
-                                </h3>
-                                <p className={`text-gray-700 font-medium ${isFull ? 'text-base mb-4' : 'text-sm mb-3'}`}>
-                                    {product.desc}
-                                </p>
-                                <p className={`text-gray-500 leading-relaxed ${isFull ? 'text-sm mb-6' : 'text-xs'} flex-1`}>
-                                    {product.detail}
-                                </p>
-                                {isFull && product.slug && (
-                                    <a href={`/products/${product.slug}`} className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform cursor-pointer">
-                                        {t.products.view_details} <ArrowRight className="ml-2 w-4 h-4" />
-                                    </a>
-                                )}
-                            </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>
