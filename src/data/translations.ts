@@ -109,6 +109,46 @@ export const translations = {
                     volume: "100ml",
                     skin_type: "Dry, Sensitive, All Skin Types"
                 }
+            },
+            "cica-mask": {
+                title: "Centella Cica Plus Mask",
+                subtitle: "Rapid Soothing for Sensitive Skin",
+                description: "A cream-essence mask packed with 10,000ppm Centella Asiatica complex (Cica) to instantly calm and repair irritated skin. Perfect for post-procedure care or redness relief.",
+                benefits: [
+                    "Instantly soothes redness",
+                    "Strengthens skin barrier",
+                    "Rich cream-essence texture",
+                    "Accelerates skin recovery"
+                ],
+                ingredients: {
+                    highlight: "Centella Asiatica (10,000ppm), Madecassoside, Panthenol",
+                    list: "Water, Centella Asiatica Extract, Glycerin, Caprylic/Capric Triglyceride, Madecassoside, Asiaticoside, Panthenol, Allantoin..."
+                },
+                usage: "After cleansing and toning, apply the mask. Leave on for 10-20 minutes. Gently pat remaining essence into the skin.",
+                specs: {
+                    volume: "27g / 5 sheets",
+                    skin_type: "Sensitive, Acne-prone, Irritated"
+                }
+            },
+            "ha-mask": {
+                title: "Hyaluronic Acid Mask",
+                subtitle: "Hydro-Filling for Dehydrated Skin",
+                description: "A high-concentration ampoule mask featuring multi-molecular Hyaluronic Acid and growth factors (EGF/FGF) for visible plumping, hydration, and elasticity.",
+                benefits: [
+                    "Deep multi-depth hydration",
+                    "Plumps fine dry lines",
+                    "Boosts skin elasticity",
+                    "Contains skin growth factors (EGF/FGF)"
+                ],
+                ingredients: {
+                    highlight: "Multi-Hyaluronic Acid, EGF, FGF, GHK-Cu",
+                    list: "Water, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, sh-Oligopeptide-1 (EGF), Copper Tripeptide-1, Panthenol..."
+                },
+                usage: "Apply to clean skin. Leave on for 15-20 minutes. Remove and pat excess ampoule into face and neck.",
+                specs: {
+                    volume: "27g / 5 sheets",
+                    skin_type: "Dry, Dehydrated, Aging"
+                }
             }
         },
     },
@@ -222,6 +262,46 @@ export const translations = {
                     volume: "100ml",
                     skin_type: "ผิวแห้ง, ผิวแพ้ง่าย, ทุกสภาพผิว"
                 }
+            },
+            "cica-mask": {
+                title: "Centella Cica Plus Mask",
+                subtitle: "ปลอบประโลมผิวแพ้ง่ายอย่างรวดเร็ว",
+                description: "มาสก์เนื้อครีมเอสเซนส์ที่อัดแน่นด้วยสารสกัดจากใบบัวบก (Cica) เข้มข้น 10,000ppm เพื่อปลอบประโลมและฟื้นฟูผิวที่ระคายเคืองทันที เหมาะสำหรับการดูแลหลังทำหัตถการหรือลดรอยแดง",
+                benefits: [
+                    "ลดรอยแดงทันที",
+                    "เสริมสร้างเกราะป้องกันผิว",
+                    "เนื้อสัมผัสครีมเอสเซนส์เข้มข้น",
+                    "เร่งการฟื้นตัวของผิว"
+                ],
+                ingredients: {
+                    highlight: "สารสกัดจากใบบัวบก (10,000ppm), มาเดคาสโซไซด์, แพนทีนอล",
+                    list: "Water, Centella Asiatica Extract, Glycerin, Caprylic/Capric Triglyceride, Madecassoside, Asiaticoside, Panthenol, Allantoin..."
+                },
+                usage: "หลังทำความสะอาดและปรับสภาพผิว วางแผ่นมาสก์ลงบนใบหน้า ทิ้งไว้ 10-20 นาที แล้วนวดเบาๆ ให้เอสเซนส์ที่เหลือซึมเข้าสู่ผิว",
+                specs: {
+                    volume: "27g / 5 แผ่น",
+                    skin_type: "ผิวแพ้ง่าย, ผิวเป็นสิว, ผิวระคายเคือง"
+                }
+            },
+            "ha-mask": {
+                title: "Hyaluronic Acid Mask",
+                subtitle: "เติมน้ำให้ผิวขาดน้ำ",
+                description: "มาสก์แอมพูลความเข้มข้นสูงที่มีกรดไฮยาลูโรนิกหลายโมเลกุลและ Growth Factors (EGF/FGF) เพื่อผิวอิ่มน้ำ ชุ่มชื้น และยืดหยุ่นอย่างเห็นได้ชัด",
+                benefits: [
+                    "เติมความชุ่มชื้นล้ำลึกหลายระดับ",
+                    "เติมเต็มริ้วรอยแห้งเล็กๆ",
+                    "เพิ่มความยืดหยุ่นให้ผิว",
+                    "มีส่วนผสมของ Growth Factors (EGF/FGF)"
+                ],
+                ingredients: {
+                    highlight: "ไฮยาลูโรนิกหลายโมเลกุล, EGF, FGF, GHK-Cu",
+                    list: "Water, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, sh-Oligopeptide-1 (EGF), Copper Tripeptide-1, Panthenol..."
+                },
+                usage: "วางบนผิวที่สะอาด ทิ้งไว้ 15-20 นาที ดึงออกแล้วนวดแอมพูลส่วนเกินให้ซึมลงสู่ใบหน้าและลำคอ",
+                specs: {
+                    volume: "27g / 5 แผ่น",
+                    skin_type: "ผิวแห้ง, ผิวขาดน้ำ, ผิวมีริ้วรอย"
+                }
             }
         },
     },
@@ -334,6 +414,46 @@ export const translations = {
                 specs: {
                     volume: "100ml",
                     skin_type: "Da khô, Da nhạy cảm, Mọi loại da"
+                }
+            },
+            "cica-mask": {
+                title: "Centella Cica Plus Mask",
+                subtitle: "Làm dịu nhanh cho da nhạy cảm",
+                description: "Mặt nạ dạng kem chứa 10.000ppm phức hợp Rau má (Cica) giúp làm dịu tức thì và phục hồi làn da bị kích ứng. Hoàn hảo để chăm sóc sau thủ thuật hoặc giảm đỏ.",
+                benefits: [
+                    "Giảm đỏ tức thì",
+                    "Tăng cường hàng rào bảo vệ da",
+                    "Kết cấu kem dưỡng đậm đặc",
+                    "Thúc đẩy quá trình phục hồi da"
+                ],
+                ingredients: {
+                    highlight: "Chiết xuất Rau má (10.000ppm), Madecassoside, Panthenol",
+                    list: "Water, Centella Asiatica Extract, Glycerin, Caprylic/Capric Triglyceride, Madecassoside, Asiaticoside, Panthenol, Allantoin..."
+                },
+                usage: "Sau khi rửa mặt và dùng toner, đắp mặt nạ lên. Để trong 10-20 phút. Nhẹ nhàng vỗ nhẹ để tinh chất còn lại thẩm thấu vào da.",
+                specs: {
+                    volume: "27g / 5 miếng",
+                    skin_type: "Da nhạy cảm, Da mụn, Da kích ứng"
+                }
+            },
+            "ha-mask": {
+                title: "Hyaluronic Acid Mask",
+                subtitle: "Cấp nước cho làn da mất nước",
+                description: "Mặt nạ ampoule nồng độ cao với Hyaluronic Acid đa phân tử và các yếu tố tăng trưởng (EGF/FGF) giúp da căng mọng, ẩm mượt và đàn hồi rõ rệt.",
+                benefits: [
+                    "Cấp ẩm sâu đa tầng",
+                    "Làm đầy các nếp nhăn khô",
+                    "Tăng cường độ đàn hồi cho da",
+                    "Chứa các yếu tố tăng trưởng da (EGF/FGF)"
+                ],
+                ingredients: {
+                    highlight: "Hyaluronic Acid đa tầng, EGF, FGF, GHK-Cu",
+                    list: "Water, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, sh-Oligopeptide-1 (EGF), Copper Tripeptide-1, Panthenol..."
+                },
+                usage: "Đắp lên da sạch. Để trong 15-20 phút. Tháo ra và vỗ nhẹ phần ampoule dư thừa lên mặt và cổ.",
+                specs: {
+                    volume: "27g / 5 miếng",
+                    skin_type: "Da khô, Da mất nước, Da lão hóa"
                 }
             }
         },
