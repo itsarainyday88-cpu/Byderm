@@ -25,7 +25,15 @@ export default function Footer() {
                         <p>{t.footer.contact}</p>
                         <p>www.wakemedi.com</p>
                     </div>
-                    <div className="mt-8 md:mt-0">
+                    <div className="mt-8 md:mt-0 flex flex-col items-end gap-4">
+                        <a
+                            href="/files/Byderm_Leaflet.pdf"
+                            download
+                            className="inline-flex items-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-blue-200 text-xs font-semibold rounded-full transition-colors border border-slate-700 hover:border-blue-500/50"
+                        >
+                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                            {t.footer.download_brochure}
+                        </a>
                         <p>{t.footer.copyright}</p>
                     </div>
                 </div>

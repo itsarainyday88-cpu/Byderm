@@ -83,6 +83,7 @@ export const translations = {
             ceo: "CEO: Ethen SIM | Business Registration Number: 383-81-03236",
             contact: "Tel: +82 10-9807-3345 | Email: info@wakemedi.com",
             copyright: "© 2026 WAKEMEDI Co., Ltd. All rights reserved.",
+            download_brochure: "Download Brochure",
         },
     },
     th: {
@@ -169,6 +170,7 @@ export const translations = {
             ceo: "CEO: Ethen SIM | เลขทะเบียนธุรกิจ: 383-81-03236",
             contact: "โทร: +82 10-9807-3345 | อีเมล: info@wakemedi.com",
             copyright: "© 2026 WAKEMEDI Co., Ltd. สงวนลิขสิทธิ์",
+            download_brochure: "ดาวน์โหลดโบรชัวร์",
         },
     },
     vi: {
@@ -255,6 +257,7 @@ export const translations = {
             ceo: "CEO: Ethen SIM | Số đăng ký kinh doanh: 383-81-03236",
             contact: "Tel: +82 10-9807-3345 | Email: info@wakemedi.com",
             copyright: "© 2026 WAKEMEDI Co., Ltd. Đã đăng ký bản quyền.",
+            download_brochure: "Tải xuống tài liệu",
         },
     },
 };
