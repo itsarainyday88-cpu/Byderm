@@ -85,6 +85,10 @@ export const translations = {
             copyright: "© 2026 WAKEMEDI Co., Ltd. All rights reserved.",
             download_brochure: "Download Brochure",
         },
+        product_detail: {
+            back_to_products: "Back to Products",
+            not_found: "Product Not Found",
+        },
     },
     th: {
         nav: {
@@ -172,6 +176,10 @@ export const translations = {
             copyright: "© 2026 WAKEMEDI Co., Ltd. สงวนลิขสิทธิ์",
             download_brochure: "ดาวน์โหลดโบรชัวร์",
         },
+        product_detail: {
+            back_to_products: "กลับไปยังสินค้า",
+            not_found: "ไม่พบสินค้า",
+        },
     },
     vi: {
         nav: {
@@ -258,6 +266,10 @@ export const translations = {
             contact: "Tel: +82 10-9807-3345 | Email: info@wakemedi.com",
             copyright: "© 2026 WAKEMEDI Co., Ltd. Đã đăng ký bản quyền.",
             download_brochure: "Tải xuống tài liệu",
+        },
+        product_detail: {
+            back_to_products: "Quay lại sản phẩm",
+            not_found: "Không tìm thấy sản phẩm",
         },
     },
 };

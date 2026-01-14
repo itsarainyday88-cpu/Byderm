@@ -24,12 +24,12 @@ export default function ProductDetailPage() {
     if (!slug || !imagePath) {
         return (
             <div className="min-h-screen pt-32 flex flex-col items-center justify-center">
-                <h1 className="text-2xl font-bold text-gray-900 mb-4">Product Not Found</h1>
+                <h1 className="text-2xl font-bold text-gray-900 mb-4">{t.product_detail.not_found}</h1>
                 <button
                     onClick={() => router.push('/products')}
                     className="text-primary hover:underline flex items-center"
                 >
-                    <ArrowLeft className="w-4 h-4 mr-2" /> Back to Products
+                    <ArrowLeft className="w-4 h-4 mr-2" /> {t.product_detail.back_to_products}
                 </button>
             </div>
         );
@@ -44,7 +44,7 @@ export default function ProductDetailPage() {
                     className="text-gray-600 hover:text-primary transition-colors flex items-center mb-8 group"
                 >
                     <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
-                    {t.nav.products}
+                    {t.product_detail.back_to_products}
                 </button>
             </div>
 
