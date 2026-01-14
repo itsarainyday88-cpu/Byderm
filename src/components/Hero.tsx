@@ -20,7 +20,7 @@ export default function Hero() {
                     <h2 className="text-blue-200 font-medium tracking-wide mb-4 animate-fade-in-up">
                         e.p.t.q. By.derm
                     </h2>
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up delay-100">
+                    <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up delay-100">
                         Bye dryness,<br />
                         Hi derm glow!
                     </h1>

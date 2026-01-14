@@ -47,12 +47,12 @@ export default function Header() {
             {/* Mobile menu - simplified for brevity, assume similar structure but using new navigation */}
             {mobileMenuOpen && (
                 <div className="lg:hidden" role="dialog" aria-modal="true">
-                    <div className="fixed inset-0 z-50" />
+                    <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
                     <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
                             <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                                 <span className="sr-only">By.derm</span>
-                                <span className="text-2xl font-bold text-primary">By.derm</span>
+                                <span className="text-2xl font-bold text-primary tracking-tight">By.derm</span>
                             </Link>
                             <button
                                 type="button"
@@ -70,7 +70,7 @@ export default function Header() {
                                         <Link
                                             key={item.name}
                                             href={item.href}
-                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-primary transition-colors"
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
                                             {item.name}

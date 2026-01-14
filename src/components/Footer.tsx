@@ -11,7 +11,7 @@ export default function Footer() {
 
                 </div>
 
-                <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between text-sm text-slate-500">
+                <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between text-sm text-slate-500 gap-8 md:gap-0">
                     <div className="space-y-2">
                         <p className="font-semibold text-slate-300">WAKEMEDI Co., Ltd. (Trade Name: WAKEMEDI)</p>
                         <p>Address: 7072h, the seventh floor 208, Misagangbyeonjungang-ro, Hanam-si, Gyeonggi-do, Republic of Korea</p>
